@@ -5,6 +5,8 @@
     0
     (+ (car l) (sum (cdr l)))))
 
+(define (sum2 l) (apply + l))
+
 (define (average . rest)
   (/ (sum rest) (length rest)))
 
@@ -15,7 +17,7 @@
   (average (/ radicand current-guess) current-guess))
 
 (define (solve-square-root radicand guess)
-  (if (close-enough? radicand guess 0.01)
+  (if (close-enough? radicand guess 0.000001)
     guess
     (solve-square-root radicand (calc-guess radicand guess))))
 

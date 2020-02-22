@@ -1,7 +1,7 @@
 (define (p) (p))
 
 (define (test a b) 
-  (if (= a 0) 
+  (if (= a 0)
       0
       y))
 

@@ -6,7 +6,7 @@
 (define (improve guess x)
   (average guess (/ x guess)))
 
-(define (average x y) 
+(define (average x y)
   (/ (+ x y) 2))
 
 ; does not work well with large or small numbers

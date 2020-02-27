@@ -6,4 +6,6 @@ Following along with this book
 
 Me:
 
-<img src='http://i.imgur.com/AthOR0U.png' style='postion: absolute; left: 0; right: 0; margin: auto'/>
+<p align='center'>
+  <img src='http://i.imgur.com/AthOR0U.png' />
+</p>

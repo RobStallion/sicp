@@ -129,3 +129,19 @@
 (A 0 (A 0 16384))
 (A 0 32768)
 65536
+
+Give concise mathematical definitions for the functions computed by the
+procedures f, g, and h for positive integer values of n.
+
+(define (f n) (A 0 n))
+; 2n
+; Got this
+
+(define (g n) (A 1 n))
+; 2^n 
+; Looked this up but probably would have been able to work this out
+
+(define (h n) (A 2 n))
+; 0 for n=0, 2 for n=1, 2^2^… (n-1 times) for n>1
+; NEVER would have been able to work this out.
+; Even after writing out the case above. No way I would have gotten this

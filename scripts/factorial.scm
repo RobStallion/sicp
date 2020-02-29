@@ -16,17 +16,19 @@
 (define (factorial-helper product counter max-count)
   (if (= counter max-count)
     (* product counter)
-    (factorial-helper 
-      (* product counter)
-      (+ counter 1)
-      max-count)))
+    (factorial-helper (* product counter)
+                      (+ counter 1)
+                      max-count)))
 
 ; from the book
-(define (factorial-helper product counter max-count)
+(define (factorial n) 
+  (fact-iter 1 1 n))
+
+(define (fact-iter product counter max-count)
   (if (> counter max-count)
       product
-      (factorial-helper (* counter product)
+      (fact-iter (* counter product)
                  (+ counter 1)
                  max-count)))
 
-(factorial 6)
+(factorial 5)

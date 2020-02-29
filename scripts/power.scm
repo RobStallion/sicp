@@ -15,8 +15,11 @@
   (if (= n 0) 0 (power-iter x n x)))
 
 (define (power-iter product counter x)
-  (if (< counter 1)
+  (if (= counter 1)
     product
     (power-iter (* product x) (- counter 1) x)))
 
-(^ 2 4)
+(^ 2 10) ; => 1024
+
+(^ 2 (^ 2 2))
+(^ 2 (^ 2 (^ 2 2)))

@@ -98,13 +98,23 @@
 (A 0 32768)
 65536
 
-
 ; Simplified answer
+; https://en.wikipedia.org/wiki/Knuth%27s_up-arrow_notation
+; See above for more info on the math
+; in the first example we can see that A 1 evaluates to 2^y
+; So (A 1 (A 2 3)) can be replaced with 2 to the power of (A 2 3)
+; A 1 = Exponentiation
 (A 2 4)
-(A 1 (A 2 3)) ; in the first example we can see that A 1 evaluates to 2^y
+(A 1 (A 2 3))
 (^ 2 (A 2 3))
-(^ 2 (A 2 3))
+(^ 2 (^ 2 (A 2 2)))
+(^ 2 (^ 2 (^ 2 (A 2 1))))
+(^ 2 (^ 2 (^ 2 2))) ; = 2 ^^ 4 = Tetration
+65536
+; based on the above, and Knuth's up-arrow notation, (A 2 4)
+; is equal to 2^^4
 
+; My answer
 (A 3 3)
 (A 2 (A 3 2))
 (A 2 (A 2 (A 3 1)))
@@ -161,6 +171,15 @@
 (A 0 (A 0 16384))
 (A 0 32768)
 65536
+
+; Simplified answer
+(A 3 3)
+(A 2 (A 3 2)) ; Based on the above (A 2 (A 3 2)) can be written as (2^^ (A 3 2))
+(2^^ (A 3 2))
+(2^^ (2^^ (A 3 1)))
+(2^^ (2^^ 2)) ; Pentation 2^^^3
+
+
 
 Give concise mathematical definitions for the functions computed by the
 procedures f, g, and h for positive integer values of n.

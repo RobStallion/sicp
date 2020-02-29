@@ -13,3 +13,10 @@
   (if (= count 0)
       b
       (fib-iter (+ a b) a (- count 1))))
+
+(fib 1)
+(fib 2)
+(fib 3)
+(fib 4)
+(fib 5)
+(fib 6)

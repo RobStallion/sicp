@@ -9,11 +9,11 @@
   (= (improve guess x) guess))
 
 (define (cube-root x)
-  (cube-root-helper 1.1 x))
+  (cube-root-iter 1.1 x))
 
-(define (cube-root-helper guess x)
+(define (cube-root-iter guess x)
   (if (good-enough? guess x)
     guess
-    (cube-root-helper (improve guess x) x)))
+    (cube-root-iter (improve guess x) x)))
 
 (cube-root 27)
